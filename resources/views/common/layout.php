@@ -2,6 +2,6 @@
 
     <?= $navigation ?>
 
-    <?= $detail ?>
+    <?= $content ?>
 
 </main>

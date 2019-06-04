@@ -13,15 +13,27 @@ class ProductController extends Controller
     {
         $detail = view('product/show');
 
+        return $this->wrapContent($detail);
+    }
+
+    public function listing()
+    {
+        $list = view('product/list');
+
+        return $this->wrapContent($list);
+    }
+
+    protected function wrapContent($content)
+    {
         $navigation = view('common/navigation');
 
-        $content = view('common/layout', [
+        $layout = view('common/layout', [
             'navigation' => $navigation,
-            'detail' => $detail
+            'content' => $content
         ]);
 
         $html = view('common/html', [
-            'content' => $content
+            'content' => $layout
         ]);
 
         return $html;
