@@ -1,0 +1,7 @@
+<main>
+
+    <?= $navigation ?>
+
+    <?= $detail ?>
+
+</main>
