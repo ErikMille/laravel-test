@@ -17,3 +17,8 @@ Route::get('/contact', 'ContactController@contact');
 
 Route::get('/product/sword', 'ProductController@show');
 
+
+
+Route::get('/continents/europe', 'ContinentController@Europe');
+
+Route::get('/countries/detail', 'CountryController@detail');
