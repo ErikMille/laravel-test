@@ -8,10 +8,13 @@ use DB;
 class CountryController extends Controller
 {
     //
-    public function detail()
+    public function detail(Request $request)
     {
-        $code = isset($_GET['code']) ? $_GET['code'] : 'CZE';
+        $request = request();
 
+        $code = isset($_GET['code']) ? $_GET['code'] : 'CZE';
+        // same line with $request object:
+        $code = $request->input('code', 'CZE');
 
         $query = "
             SELECT *

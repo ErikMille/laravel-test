@@ -22,3 +22,6 @@ Route::get('/product/sword', 'ProductController@show');
 Route::get('/continents/europe', 'ContinentController@Europe');
 
 Route::get('/countries/detail', 'CountryController@detail');
+
+Route::get('/regions/edit', 'RegionController@edit');
+Route::post('/regions/edit', 'RegionController@edit');
